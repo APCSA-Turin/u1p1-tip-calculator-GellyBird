@@ -7,16 +7,16 @@ import java.text.DecimalFormat;
 
 public class TipCalculator {
     //WRITE YOUR PROGRAM IN calculateTip
-    public static String calculateTip(int people, int percent, double cost) { //You must use these  variable in your calculations
+    public static String calculateTip(int people, int percent, double cost) { //You must use these variable in your calculations
         //DO NOT DELETE ANY OF THE CODE BELOW      
         StringBuilder result = new StringBuilder();
         //your code here
         DecimalFormat df = new DecimalFormat("#.##"); 
-        double tip = cost * ((double)percent / 100);
-        double total = tip + cost;
-        double originalCostPerPerson = cost / people;
-        double tipPerPerson = tip / people;
-        double totalPerPerson = total / people; 
+        double tip = cost * ((double)percent / 100); // Multiples the cost of the food with the tip (whole number/100 to make it a decimal)
+        double total = tip + cost; // Adds the tip and food cost together
+        double originalCostPerPerson = cost / people; // divides the food cost prior to the tip by the number of people
+        double tipPerPerson = tip / people; // divides the tip cost by the number of people 
+        double totalPerPerson = total / people; // divides the cost with tip by the number of people
 
 
         result.append("-------------------------------\n");
